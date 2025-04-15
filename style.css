@@ -25,3 +25,19 @@ h1{
     text-align: center;
 
 }
+
+.about{
+    height: 200px;
+    background: linear-gradient(to top, black,white);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+   grid-template-areas:
+   "h h h h x" ;
+    
+}
+.about-content{
+    text-align: end;
+color: beige;
+grid-area: x;
+width: 25%;
+}
