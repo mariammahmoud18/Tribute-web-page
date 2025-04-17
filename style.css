@@ -1,13 +1,55 @@
+/*GENERAL*/
 body{
     margin: 0;
 }
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block; /* Required for transform to apply properly */
+  }
+  
+  a:hover {
+    transform: scale(1.1);  /* "Pops" the text */
+  }
+  
+  ul, ol {
+    list-style: none;        /* Removes bullets or numbers */
+  }
+  h1{
+    text-align: center;
+    font-size: 60px;
+  }
+
+
+  /*MAIN SECTIONS*/
+
 
 .header{
     display: flex;
     justify-content: space-around;
-    flex: 1;
+
 }
 
+.about{
+    height: 300px;
+    background: linear-gradient(to bottom, white 5%, black);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+  
+}
+
+.legacy{
+    height: 400px;
+    background: linear-gradient(to bottom, black 5%, white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+/*OTHERS*/
 .side-bar{
     display: flex;
     flex-direction: column;
@@ -15,9 +57,7 @@ body{
     align-items: center;
     flex:1;
 }
-h1{
-    font-size: 60px;
-}
+
 
 .topmost-quote{
     font-style: italic;
@@ -26,18 +66,32 @@ h1{
 
 }
 
-.about{
-    height: 200px;
-    background: linear-gradient(to top, black,white);
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-   grid-template-areas:
-   "h h h h x" ;
-    
+
+
+.about-heading, .legacy-heading{
+    font-style: bold;
+    text-align: justify;
 }
+
+.about-heading{
+    color: white;
+}
+
 .about-content{
-    text-align: end;
-color: beige;
+    font-size: 17px;
+    text-align:center;
+color: black;
 grid-area: x;
-width: 25%;
+width: 50%;
+}
+
+
+.legacy-content{
+    order:1;
+color:white; 
+text-align: center;   
+}
+
+.legacy-heading{
+    order: 2;
 }
