@@ -20,6 +20,10 @@ a {
     text-align: center;
     font-size: 60px;
   }
+  li{
+    font-size: 17px;
+    color: black;
+  }
 
 
   /*MAIN SECTIONS*/
@@ -33,7 +37,7 @@ a {
 
 .about{
     height: 300px;
-    background: linear-gradient(to bottom, white 5%, black);
+    background: linear-gradient(to bottom, white 1%, lightgrey);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -43,11 +47,31 @@ a {
 
 .legacy{
     height: 400px;
-    background: linear-gradient(to bottom, black 5%, white);
+    background: linear-gradient(to bottom, lightgrey 1%, white);
     display: flex;
     justify-content: space-around;
     align-items: center; 
 }
+
+.projects{
+    height: 400px;
+    background: linear-gradient(to bottom, white 1%, lightgrey);
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+
+.media{
+    height: 500px;
+    background: linear-gradient(to bottom, lightgrey 1%, white);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+
+
 
 /*OTHERS*/
 .side-bar{
@@ -61,34 +85,33 @@ a {
 
 .topmost-quote{
     font-style: italic;
-    color: darkgray;
+    color: #9E9E9E;
     text-align: center;
 
 }
 
 
 
-.about-heading, .legacy-heading{
+.about-heading, .legacy-heading, .media-heading, .projects-heading{
     font-style: bold;
     text-align: justify;
+    color:#9E9E9E;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+
 }
 
-.about-heading{
-    color: white;
-}
 
-.about-content{
+.about-content, .projects-content{
     font-size: 17px;
     text-align:center;
 color: black;
-grid-area: x;
 width: 50%;
 }
 
 
 .legacy-content{
     order:1;
-color:white; 
+color:black; 
 text-align: center;   
 }
 
@@ -96,28 +119,22 @@ text-align: center;
     order: 2;
 }
 
-.media{
-    height: 500px;
-    background: linear-gradient(to bottom, white 5%, black);
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-}
-
 .media-content{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    align-items:flex-start;
     text-align: center;
+    gap:0;
 }
+.media-content h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  
+  .media-content ul {
+    margin-top: 0;
+  }
+  
 
-.media-heading{
-    font-size: 40px;
-}
 
-.media li, .media h2{
-    color: white;
-}
 
