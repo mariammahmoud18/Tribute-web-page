@@ -64,11 +64,19 @@ a {
 
 .media{
     height: 500px;
-    background: linear-gradient(to bottom, lightgrey 1%, white);
+    background: linear-gradient(to bottom, white 1%, lightgrey);
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items: center;
+}
+
+.quotes{
+    height: 400px;
+    background: linear-gradient(to bottom, lightgrey 1%, white);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  
 }
 
 
@@ -92,7 +100,7 @@ a {
 
 
 
-.about-heading, .legacy-heading, .media-heading, .projects-heading{
+.about-heading, .legacy-heading, .media-heading, .projects-heading, .quotes-heading{
     font-style: bold;
     text-align: justify;
     color:#9E9E9E;
@@ -115,7 +123,7 @@ color:black;
 text-align: center;   
 }
 
-.legacy-heading{
+.legacy-heading, .quotes-heading{
     order: 2;
 }
 
@@ -136,5 +144,50 @@ text-align: center;
   }
   
 
+  .carousel {
+    width: 90%;
+    max-width: 500px;
+    overflow-x:scroll;
+    scroll-snap-type:none;
+    -webkit-overflow-scrolling:touch;
+    scroll-behavior:smooth;
+    margin: 0 auto;
+  }
+  
+  .carousel-track {
+    display: flex;
+    width: max-content;
+    gap: 0;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 10%;
+    scroll-snap-align: start;
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+    white-space: normal; 
+    word-wrap: break-word; 
+    margin: 0 35px;
 
+    
+  }
 
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .carousel::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+  }
+  
+  .carousel::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 4px;
+  }
+  
+  .carousel::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
